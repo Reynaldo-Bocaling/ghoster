@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.title-font {
+  font-family: "Sigmar One", sans-serif;
+}
+
+
+body {
+  background: #000000;
+}
+
+@layer utilities {
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexAround {
+    @apply flex items-center justify-around;
+  }
+
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+
+  .flexColStart {
+    @apply flex flex-col items-start justify-center
+  }
+
+  .flexColCenter {
+    @apply flex flex-col items-center justify-center
+  }
+
+  .flexColEnd {
+    @apply flex flex-col items-end justify-center
+  }
+
+  .flexColBetween {
+    @apply flex flex-col items-center justify-between
+  }
+
+
+}
+
+
+/* shadow */
+#hero::after {
+
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -100px;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 500px;
+  border-radius: 20%;
+  background: radial-gradient(ellipse at center, hsla(281, 97%, 55%, 0.3),
+      transparent 64%);
+  z-index: 0;
+}
+
+#hero::before {
+
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 900px;
+  height: 500px;
+  border-radius: 20%;
+  background: radial-gradient(ellipse at center, hsla(281, 97%, 55%, 0.3),
+      transparent 64%);
+  z-index: 0;
+}
+
+#about::after,
+#banner::after {
+
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 900px;
+  height: 500px;
+  border-radius: 20%;
+  background: radial-gradient(ellipse at center, hsla(281, 97%, 55%, 0.3),
+      transparent 64%);
+  z-index: 0;
+}
+
+
+#tokenomics::after {
+
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 500px;
+  border-radius: 20%;
+  background: radial-gradient(ellipse at center, hsla(281, 97%, 55%, 0.3),
+      transparent 64%);
+  z-index: 0;
+}
+
+
+
+
+.gradient-button {
+  color: #fff;
+  background: linear-gradient(90deg, #5940fa, #8c7bfe);
+  border: none;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.5);
+}
+
+.gradient-text {
+
+  background: linear-gradient(90deg, #7221ff, #b6a4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
